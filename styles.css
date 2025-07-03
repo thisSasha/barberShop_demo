@@ -20,8 +20,8 @@ html {
 
 body {
     width: 100vw;
-    overflow-x: hidden;
     background-color: var(--color-bg);
+    overflow-x: hidden;
 }
 
 h1,
@@ -75,12 +75,13 @@ h2 {
 /* Nav */
 nav {
     width: 100vw;
-    height: 12vh;
-    max-height: 80px;
+    min-height: 12vh;
     border-bottom: 1px solid var(--color-fg);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
     position: absolute;
     padding: 0 32px;
     font-size: 16px;
@@ -88,7 +89,8 @@ nav {
 
 .nav__links {
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 8px 40px;
 }
 
 .nav__link {
@@ -173,7 +175,7 @@ header {
     height: 96vh;
     margin-bottom: 4vh;
     width: 100vw;
-    background: url('./header.png') no-repeat;
+    background: url('./assets/header.png') no-repeat;
     background-position: center;
     background-size: 105%;
     background-attachment: fixed;
@@ -447,8 +449,8 @@ nav * {
 }
 
 .section__image {
-    width: 800px;
-    height: 400px;
+    width: 60vw;
+    height: max-content;
     overflow: hidden;
     border-radius: 20px;
     margin: 20px 0;
@@ -465,13 +467,13 @@ nav * {
     margin-bottom: 20px;
 }
 
-
 /* Team */
 .team__workers {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    padding: 12px 0;
 }
 
 .team__worker {
@@ -553,6 +555,7 @@ nav * {
 
 .price-list .section__title {
     font-size: 48px;
+    padding-top: 80px;
     margin-bottom: 40px;
 }
 
@@ -560,6 +563,7 @@ nav * {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    overflow-y: hidden;
     gap: 16px;
     margin-bottom: 40px;
 }
@@ -596,7 +600,7 @@ nav * {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    min-height: 420px;
+    min-height: max(80vh, 420px);
 }
 
 .price-list__item {
@@ -684,16 +688,15 @@ nav * {
 .portfolio__item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
     display: block;
     transition: transform 0.3s ease;
+    position: relative;
+    transform-origin: top center;
 }
 
 .portfolio__item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.25);
 }
-
 
 /* Address */
 .address {
@@ -735,7 +738,7 @@ nav * {
     transition: 300ms;
 }
 
-.footer__inner {
+.footer__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

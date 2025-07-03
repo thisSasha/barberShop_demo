@@ -57,7 +57,7 @@ showSlide(currentSlide);
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
         if (e.isTrusted) {
-            document.querySelector('.price-list').scrollIntoView({ behavior: 'smooth' });
+            document.querySelector('.price-list .section__title').scrollIntoView({ behavior: 'smooth' });
         }
         buttons.forEach(b => b.classList.remove('active'));
         button.classList.add('active');
