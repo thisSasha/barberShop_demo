@@ -1,8 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="./preload.js"></script>
+    <style>
+        .preload {
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #111;
+        }
+
+        /* Прелоадер в виде двух квадратов которые туда сюда прикольно ходят через before after */
+        .preload::before,
+        .preload::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 5px;
+            animation: square-animation 1.5s infinite ease-in-out;
+        }
+
+        .preload::before {
+            top: calc(50% - 25px);
+            left: calc(50% - 75px);
+        }
+
+        .preload::after {
+            top: calc(50% - 25px);
+            left: calc(50% + 25px);
+            animation-delay: 0.75s;
+        }
+
+        @keyframes square-animation {
+            0% {
+                transform: translateX(0) rotate(0);
+            }
+
+            50% {
+                transform: translateX(50px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateX(0) rotate(0);
+            }
+        }
+
+        body.isPreload {
+            overflow: hidden;
+        }
+
+        body:not(.isPreload) .preload {
+            display: none;
+        }
+    </style>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./media.css">
     <meta charset="UTF-8">
@@ -10,7 +66,8 @@
     <title>Gent Code</title>
 </head>
 
-<body>
+<body class="isPreload">
+    <div class="preload"></div>
     <nav>
         <div class="nav__logo logo">
             <i class="fa-solid fa-scissors"></i>
@@ -272,9 +329,8 @@
     </footer>
 
     <script>
-        // alert('Данный сайт - демо для портфолио')
+        alert('Данный сайт - демо для портфолио')
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
     <script src="https://kit.fontawesome.com/2c09f7fb88.js" crossorigin="anonymous"></script>
 </body>
