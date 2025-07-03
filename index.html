@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gent Code</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__logo logo">
+            <i class="fa-solid fa-scissors"></i>
+            <a href="#">Gent Code</a>
+        </div>
+        <ul class="nav__links">
+            <li class="nav__link"><a href="#header" title="Перейти на главную страницу">Главная</a></li>
+            <li class="nav__link"><a href="#about" title="Узнать о нас">О нас</a></li>
+            <li class="nav__link"><a href="#price" title="Посмотреть прайс-лист">Прайс-лист</a></li>
+            <li class="nav__link"><a href="#portfolio" title="Посмотреть портфолио">Портфолио</a></li>
+            <li class="nav__link"><a href="#address" title="Узнать где мы находимся">Где мы находимся</a></li>
+        </ul>
+        <div class="nav__socials">
+            <a href="#" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" title="VK">
+                <i class="fab fa-vk"></i>
+            </a>
+        </div>
+    </nav>
+    <header id="header">
+        <h1 class="header__title">Gent Code</h1>
+        <p class="header__subtitle">Территория мужского стиля</p>
+        <button class="header__button">Записаться онлайн</button>
+    </header>
+    <div class="sidebar-layout">
+        <aside class="sidebar">
+            <div class="sidebar__slider">
+                <div class="sidebar__slide sidebar__slide_wrapper">
+                    <img src="./assets/haircuts/1.png">
+                </div>
+            </div>
+            <div class="sidebar__logo logo">
+                <i class="fa-solid fa-scissors"></i>
+                <a href="#">Gent Code</a>
+            </div>
+            <p>
+                г. Гродно
+            </p>
+            <ul class="locations">
+                <li class="location">
+                    <i class="fa-solid fa-caret-right"></i>
+                    ул. Калиновского 50
+                </li>
+                <li class="location">
+                    <i class="fa-solid fa-caret-right"></i>
+                    ул. Ожешко 4
+                </li>
+                <li class="location">
+                    <i class="fa-solid fa-caret-right"></i>
+                    ул. Дубко 17
+                </li>
+            </ul>
+            <a href="tel:+37511111111">
+                <p>+375 (11) 111-11-11</p>
+            </a>
+            <i class="far fa-clock sidebar__title"></i>
+            <div class="sidebar__hours">
+                <table>
+                    <tr>
+                        <td>Пн - Пт</td>
+                        <td>9:00 - 21:00</td>
+                    </tr>
+                    <tr>
+                        <td>Сб</td>
+                        <td>10:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Вс</td>
+                        <td>10:00 - 18:00</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="sidebar__button">
+                Записаться онлайн
+            </button>
+
+        </aside>
+        <div class="sidebar-layout__content">
+            <section class="about" id="about">
+                <h2 class="section__title">О нас</h2>
+                <p class="section__paragraph">
+                    Мы - команда профессионалов, которая поможет вам выглядеть стильно и ухоженно. Наша парикмахерская
+                    предлагает широкий спектр услуг для мужчин, включая стрижки, бритье, уход за бородой и усами, а
+                    также
+                    косметические процедуры. Мы используем только высококачественные продукты и современное
+                    оборудование,
+                    чтобы обеспечить нашим клиентам наилучший результат.
+                </p>
+                <div class="section__image">
+                    <img src="./assets/about.png" alt="Наш коллектив">
+                </div>
+            </section>
+            <section class="team">
+                <h2 class="section__title">Наша команда</h2>
+                <div class="team__workers">
+                    <div class="team__worker">
+                        <div class="team__img">
+                            <img src="./assets/workers/anton_chernov.png" alt="Антон Чернов">
+                        </div>
+                        <div class="team__name">Антон Чернов</div>
+                        <div class="team__description">
+                            Универсал с 8-летним опытом. Работает с любыми типами волос.
+                            “Не просто стригу — подбираю стиль под характер.”
+                        </div>
+                    </div>
+                    <div class="team__worker">
+                        <div class="team__img">
+                            <img src="./assets/workers/denis_savin.png" alt="Денис Савин">
+                        </div>
+                        <div class="team__name">Денис Савин</div>
+                        <div class="team__description">
+                            Специалист по fade и креативным укладкам.
+                            “Когда мужчина уверен в причёске — он уверен в себе.”
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <section class="price-list" id="price">
+        <h2 class="section__title">Прайс-лист</h2>
+
+        <div class="price-list__categories">
+            <button class="price-list__category active" data-category="hair">Стрижки</button>
+            <button class="price-list__category" data-category="beard">Борода</button>
+            <button class="price-list__category" data-category="combo">Комбо</button>
+        </div>
+
+        <div class="price-list__items">
+
+            <!-- Стрижки -->
+            <div class="price-list__item" data-category="hair">
+                <span class="price-list__name">Мужская стрижка — Антон</span>
+                <span class="price-list__price">1400 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="hair">
+                <span class="price-list__name">Мужская стрижка — Денис</span>
+                <span class="price-list__price">1600 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="hair">
+                <span class="price-list__name">Fade / Skin Fade — Антон</span>
+                <span class="price-list__price">1600 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="hair">
+                <span class="price-list__name">Fade / Skin Fade — Денис</span>
+                <span class="price-list__price">1800 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="hair">
+                <span class="price-list__name">Подростковая стрижка</span>
+                <span class="price-list__price">1100 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="hair">
+                <span class="price-list__name">Камуфляж седины</span>
+                <span class="price-list__price">800 ₽</span>
+            </div>
+
+            <!-- Борода -->
+            <div class="price-list__item" data-category="beard">
+                <span class="price-list__name">Оформление бороды — Антон</span>
+                <span class="price-list__price">900 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="beard">
+                <span class="price-list__name">Оформление бороды — Денис</span>
+                <span class="price-list__price">1100 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="beard">
+                <span class="price-list__name">Королевское бритьё</span>
+                <span class="price-list__price">1700 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="beard">
+                <span class="price-list__name">Масло для бороды + укладка</span>
+                <span class="price-list__price">400 ₽</span>
+            </div>
+
+            <!-- Комбо -->
+            <div class="price-list__item" data-category="combo">
+                <span class="price-list__name">Full Gent (стрижка + борода)</span>
+                <span class="price-list__price">3100 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="combo">
+                <span class="price-list__name">Стрижка + камуфляж</span>
+                <span class="price-list__price">2200 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="combo">
+                <span class="price-list__name">Express стрижка (20 мин)</span>
+                <span class="price-list__price">1000 ₽</span>
+            </div>
+            <div class="price-list__item" data-category="combo">
+                <span class="price-list__name">Маска + массаж головы</span>
+                <span class="price-list__price">700 ₽</span>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2 class="section__title">Наши работы</h2>
+        <div class="portfolio__wrapper">
+        </div>
+    </section>
+
+    <section class="address" id="address">
+        <h2 class="section__title">Где мы находимся</h2>
+        <iframe id="map"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaa68a3a1f15a47babc157ba5a7a7412e6e1ba344fed7b57e7066c8b82142dd9d&amp;source=constructor"
+            frameborder="0"></iframe>
+        <div class="address_text">
+            <p>г. Гродно</p>
+            <ul class="locations">
+                <li class="location">
+                    <i class="fa-solid fa-caret-right"></i>
+                    ул. Калиновского 50
+                </li>
+                <li class="location">
+                    <i class="fa-solid fa-caret-right"></i>
+                    ул. Ожешко 4
+                </li>
+                <li class="location">
+                    <i class="fa-solid fa-caret-right"></i>
+                    ул. Дубко 17
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand logo">
+                <i class="fa-solid fa-scissors"></i>
+                <a href="#">Gent Code</a>
+            </div>
+            <div class="footer__links">
+                <div class="footer__links-group">
+                    <a href="#header">Главная</a>
+                    <a href="#about">О нас</a>
+                    <a href="#price">Прайс-лист</a>
+                </div>
+                <div class="footer__links-group">
+                    <a href="#portfolio">Портфолио</a>
+                    <a href="#address">Где мы находимся</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+            </div>
+            <div class="footer__socials">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" title="VK"><i class="fab fa-vk"></i></a>
+            </div>
+            <div class="footer__credits">
+                by <a href="https://thisSasha.github.io" target="_blank" rel="noopener">thisDevSasha</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // alert('Данный сайт - демо для портфолио')
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/2c09f7fb88.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
